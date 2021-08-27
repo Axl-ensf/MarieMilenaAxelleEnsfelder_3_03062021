@@ -64,15 +64,16 @@
     margin: auto;
   }
 }
-.reservation__bouton {
+.reservation__bouton, .commander__bouton {
   background:linear-gradient($secondary,$primary_color);
+  @include bloc_shadow;
   color: white;
   border-radius: 15px 15px 15px 15px;
-  justify-content: center;
   height: 10vw;
   width: 50vw;
   border: none;
-  & a{
+  padding: 10px 20px 10px 20px;
+   & a{
     text-decoration: none;
     color: white;
     }
@@ -126,7 +127,9 @@ nav li{
 
 }
 .navigation i{
-  margin-right: 10px;
+  margin-right: 15px;
+  width:20px;
+  text-align:center;
   
   }
 
@@ -218,8 +221,83 @@ nav li{
     }
   }
 }
+/*menu*/
+.fas fa-arrow-left{
+  margin-top: 10px;
+  margin-left:10px;
+}
+.background__image{
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  height:200px;
+  & img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.menu__bloc{
+  border-radius: 20px 20px 0px 0px;
+  background-color: $background_resto;
+  height:890px;
+  z-index: 1;
+  position: relative;
+}
+.entete__menu{
+  font-family: "shrikhandregular", sans-serif;
+  width:100%;
+  text-align:center;
+}
+.menu__titre{
+  font-family:"robotoregular", sans-serif;
+  font-size: 1em;
+  color: $icons;
+  margin-left:10px;
+  margin-bottom:5px;
+  border-bottom: 2px solid $tertiary;
+  width: 12%;
+  padding-bottom: 5px;
+}
+.menu__options{
+  height: 15vw;
+  background-color: white;
+  border-radius: 20px;
+  padding: 0px;
+  box-shadow: 2px 2px 5px gray;
+  margin: 10px 10px 10px 10px;
+  position: relative;
+  font-family:"robotoregular", sans-serif;
+  & h2{
+    font-family:"robotoregular", sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    padding:10px 0px 0px 10px;
+    margin-bottom:2px;
+    color: black;
+  }
+  & p{
+    font-family:"robotoregular", sans-serif;
+    font-size: 0.9em;
+    padding:0px 0px 10px 10px;
+    margin-top:2px;
+    color: black;
+  }
+  & strong{
+    font-family:"robotoregular", sans-serif;
+    font-weight: bold;
+    position:absolute;
+    right:15px;
+  }
+  & a {
+    text-decoration: none;
+}
 
-
-
-
+}
+.commander{
+  margin:40px 10px 40px 10px;
+  width: auto;
+  padding: 0px;
+  text-align: center;
+  background-color: $background_resto;
 } 
+}
