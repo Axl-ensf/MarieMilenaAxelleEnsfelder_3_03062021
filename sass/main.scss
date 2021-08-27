@@ -152,6 +152,9 @@ nav li{
   position: absolute;
   left: 60%;
 }
+.restaurant__nom {
+  margin: 6px 1px;
+}
 .restaurant__nom h2 {
   color: black;
   font-weight: bold;
@@ -183,4 +186,31 @@ nav li{
     object-fit: cover;
   }
 }
+.footer__logo {
+  width: 100px;
+  margin: 20px 10px 0px 15px;
+  filter: invert(01) sepia(10) saturate(0) hue-rotate(175deg);
+}
+#footer {
+  background-color: #353535;
+  width: 100%;
+  & ul{
+    padding-left: 15px;
+    & li{
+      list-style-type: none;
+      margin: 10px 20px 10px 0px;
+      width: 100%;
+      font-size: 1em;
+      
+    }
+      & a{
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+
+
+
 } 
