@@ -93,17 +93,18 @@ nav ul {
   padding-right: 10px;
   padding-left: 10px;
   & a{
-    padding: 2.1vw;
+    padding: 8vw;
     color: black;
     text-decoration: none;
   }
   & li{
-  width: 100%;
+  width: 95%;
   background-color: #f6f6f6;
-  padding: 10px 0px;
+  padding: 15px 0px;
   border-radius: 15px 15px 15px 15px;
   list-style-type: none;
-  margin: 10px 20px 10px 0px;
+  margin: 0 auto 15px auto;
+  position: relative;
   }
 }
 nav li{
@@ -116,11 +117,13 @@ nav li{
   width: 20px;
   height: 20px;
   text-align: center;
-  float: left;
   border-radius: 100px;
   font-size: 12px;
   line-height: 20px;
-  margin-right:10px;
+  margin-right:20px;
+  position: absolute;
+  left:-6px;
+
 }
 .navigation i{
   margin-right: 10px;
@@ -147,11 +150,12 @@ nav li{
 .banner__new {
   background-color:$tertiary;
   width: 80px;
-  padding-left: 4px;
+  padding: 2px 0px 2px 0px;
   color: $text_banner;
   position: absolute;
   right:5%;
   top:5%;
+  text-align:center;
 }
 .restaurant__nom {
   margin: 6px 1px;
