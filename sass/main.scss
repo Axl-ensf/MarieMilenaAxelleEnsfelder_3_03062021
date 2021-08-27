@@ -150,10 +150,12 @@ nav li{
   padding-left: 4px;
   color: $text_banner;
   position: absolute;
-  left: 60%;
+  right:5%;
+  top:5%;
 }
 .restaurant__nom {
   margin: 6px 1px;
+  position: relative;
 }
 .restaurant__nom h2 {
   color: black;
@@ -168,9 +170,10 @@ nav li{
 .heart {
   padding-right: 20px;
   width: auto;
-  position: relative;
-  left: 90%;
-  bottom: 60%;
+  display:inline-block;
+  position: absolute;
+  right:3%;
+  top:10%;
 }
 .restaurant__prev {
   height: 85vw;
@@ -179,6 +182,7 @@ nav li{
   padding: 0px;
   box-shadow: 2px 2px 5px gray;
   margin: 10px 10px 10px 10px;
+  position: relative;
   & img {
     width: 100%;
     height: 60vw;
@@ -194,6 +198,7 @@ nav li{
 #footer {
   background-color: #353535;
   width: 100%;
+  height:200px;
   & ul{
     padding-left: 15px;
     & li{
