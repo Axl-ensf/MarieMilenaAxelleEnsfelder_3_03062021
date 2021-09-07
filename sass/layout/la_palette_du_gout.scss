@@ -1,0 +1,88 @@
+/*menu*/
+
+.background__image{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    height:200px;
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .menu__bloc{
+    border-radius: 20px 20px 0px 0px;
+    background-color: $background_resto;
+    height:890px;
+    z-index: 1;
+    position: relative;
+    & a {
+      text-decoration: none;
+      width: 100%;
+  }
+  }
+  .entete__menu{
+    font-family: "Shrikhand", sans-serif;
+    width:auto;
+    font-size: 1.5em;
+    text-align: left;
+    margin: 0px 10px 0px 10px;
+    padding-top:20px;
+    & i{
+      float: right;
+      margin-right:30px;
+      text-decoration: none;
+    }
+  }
+  .menu__titre{
+    font-family:"robotoregular", sans-serif;
+    font-size: 1em;
+    color: $icons;
+    margin-left:10px;
+    margin-bottom:5px;
+    border-bottom: 2px solid $tertiary;
+    width: 12%;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  .menu__options{
+    height: 15vw;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0px;
+    box-shadow: 2px 2px 5px gray;
+    margin: 0px 10px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    font-family:"robotoregular", sans-serif;
+    & h2{
+      font-family:"robotoregular", sans-serif;
+      font-weight: bold;
+      font-size: 1em;
+      padding-left: 10px;
+      margin:10px 0px 0px 5px;
+      color: black;
+    }
+    & p{
+      font-family:"robotoregular", sans-serif;
+      font-size: 0.9em;
+      padding-left:15px;
+      margin-top:2px;
+      color: black;
+      display: flex;
+      justify-content: space-between;
+    }
+    & strong{
+      font-family:"robotoregular", sans-serif;
+      font-weight: bold;
+      display: flex;
+      margin-right: 20px;
+    }
+  }
+  .commander{
+    margin:40px 10px 40px 10px;
+    width: auto;
+    padding: 0px;
+    text-align: center;
+    background-color: $background_resto;
+  } 
