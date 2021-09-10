@@ -1,0 +1,172 @@
+body{
+    margin: 0px;
+    padding: 0;
+}
+.test{
+    position: relative;
+    width:30px;
+    height: 30px;
+    background: linear-gradient(180deg,#FF79DA 0%,#FF79DA 5%, #9356DC 50%,#9356DC 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.test::after{
+    position: absolute;
+    top:-100px;
+    left:-100px;
+    width:30px;
+    height: 30px;
+}
+.heart__1{
+    position: relative;
+    width:30px;
+    height: 30px;
+    background: linear-gradient(180deg,#FF79DA 0%,#FF79DA 5%, #9356DC 50%,#9356DC 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.heart{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding:1px 1px;
+    background: white;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #9356DC;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.heart:before{
+    position: absolute;
+    content: '';
+    top:0;
+    left:0;
+    border-radius:9px;
+    width: 100%;
+    height:100%;
+    background: linear-gradient(180deg,#FF79DA 0%,#FF79DA 5%, #9356DC 50%,#9356DC 100%);
+    z-index: -1;
+    transform-origin: bottom;
+    transform:translateY(40px);
+    transition: 3s;
+}
+.heart:hover:before{
+    transform: rotate(0deg);
+}
+
+
+p {
+    font-size: 2rem;
+    font-style: normal;
+    font-family: "Shrikhand", sans-serif;
+    background: -webkit-linear-gradient(225deg, #9356DC, #FF79DA,             
+    #99E2D0) 0% 0% / 300% 300%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fontgradient 2s ease infinite;  
+    }
+    @keyframes fontgradient {
+    0%{background-position:0% 92%}
+    50%{background-position:100% 9%}
+    100%{background-position:0% 92%}
+    }
+
+button{
+    border: 0;
+    background:transparent;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding:20px 20px;
+    border-radius: 30px;
+    cursor:pointer;
+    font-size: 1.5em;
+    box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, .5), 0px 0px 0px 0px 
+    rgba(39, 200, 255, .5);
+    transition: all .2s;
+}  
+
+button::after{
+    content:"";
+    width: 400px;
+    height:200px;
+    background: linear-gradient(180deg,#FF79DA 0%,#FF79DA 5%, #9356DC 50%,#9356DC 100%);
+    position: absolute;
+    top:-50px;
+    left:-100px;
+    z-index: -1;
+    transition: all .5s;
+}
+
+button:hover::after{
+    transform: rotate(150deg);
+}
+
+button:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, .25),-10px 10px 25px 0px
+    rgba(39, 200, 255, .25) ;
+}
+
+.coeur_fix{
+    color: transparent;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #9356DC;
+}
+.coeur{
+    color: linear-gradient(#8f838c, #9356DC);
+    
+}
+.coeur_fix:hover{
+    color: linear-gradient(#8f838c, #9356DC);
+    animation: boom 2s linear alternate both;
+    
+}
+@-webkit-keyframes boom{
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+    to{
+        transform: translateY(-100px);
+    }
+}
+@-moz-keyframes boom{
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+    to{
+        transform: translateY(-100px);
+    }
+}
+@keyframes boom{
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+    to{
+        transform: translateY(-100px);
+    }
+}
+
+
+
+      
+    
