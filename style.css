@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Shrikhand", "robotoregular";
+  src: url("font/shrikhand-regular-webfont.woff2") format("woff2"), url("font/shrikhand-regular-webfont.woff") format("woff");
+  src: url("Roboto-Regular-webfont.eot");
+  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /*smartphone*/
 @media all and (max-width: 600px) {
   html {
@@ -13,14 +21,6 @@
     max-width: 100%;
   }
 
-  @font-face {
-    font-family: "Shrikhand", "robotoregular";
-    src: url("font/shrikhand-regular-webfont.woff2") format("woff2"), url("font/shrikhand-regular-webfont.woff") format("woff");
-    src: url("Roboto-Regular-webfont.eot");
-    src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
-    font-weight: normal;
-    font-style: normal;
-  }
   /*header*/
   #entete {
     padding: 5vw;
@@ -49,10 +49,12 @@
 
   .reservation {
     width: 90%;
-    padding: 30px 20px 0px 20px;
+    padding: 20px;
     text-align: center;
-    background-color: #f6f6f6;
     height: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
   }
   .reservation__titre {
     font-size: 1.5em;
@@ -70,6 +72,7 @@
     width: 50vw;
     border: none;
     padding: 10px 20px 10px 20px;
+    margin: 20px auto;
   }
   .reservation__bouton a, .commander__bouton a {
     text-decoration: none;
@@ -142,7 +145,7 @@
 
   .restaurant__prev {
     height: 85vw;
-    background-color: white;
+    background-color: transparent;
     border-radius: 20px;
     padding: 0px;
     box-shadow: 2px 2px 5px gray;
@@ -176,8 +179,9 @@
   }
 
   .restaurant__nom {
-    margin: 6px 1px;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: auto;
   }
 
   .restaurant__nom h3 {
@@ -187,18 +191,73 @@
     margin-left: 10px;
   }
 
+  .restaurant__nom--description {
+    width: 90%;
+  }
+
   .restaurant__nom p {
     color: black;
     margin-left: 10px;
   }
 
-  .heart {
-    padding-right: 20px;
-    width: auto;
-    display: inline-block;
+  .container {
+    position: relative;
+    text-align: center;
+    margin: 15px 30px;
+    font-size: 2em;
+    cursor: pointer;
+    width: 35px;
+  }
+
+  .coeur_vide {
+    color: transparent;
+    -webkit-text-stroke: 3px;
+    -webkit-text-stroke-color: #9356DC;
+  }
+
+  .coeur_rempli {
     position: absolute;
-    right: 3%;
-    top: 10%;
+    width: 34px;
+    height: 35px;
+    bottom: 13%;
+    color: transparent;
+    -webkit-text-stroke: 0px;
+    -webkit-text-stroke-color: #9356DC;
+    transform-origin: bottom;
+    transform: scale(0.1);
+    transition: transform 3s ease;
+  }
+
+  .coeur_vide:hover + .coeur_rempli {
+    background: radial-gradient(#FF79DA 0%, #FF79DA 5%, #9356DC 50%, #9356DC 100%);
+    background-clip: border-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transform: scale(1);
+  }
+
+  .heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 30px;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  .heart__rempli {
+    color: transparent;
+    -webkit-color: transparent;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #9356DC;
+  }
+
+  .coeur__vide:hover {
+    background: linear-gradient(180deg, #FF79DA 0%, #FF79DA 5%, #9356DC 50%, #9356DC 100%);
+    background-clip: border-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: appears 1s cubic-bezier(0.2, 0.6, 0.8, 0.4) forwards;
+    -webkit-animation: appears 1s cubic-bezier(0.2, 0.6, 0.8, 0.4) forwards;
   }
 
   .footer__logo {
@@ -227,148 +286,185 @@
     color: white;
     padding-left: 10px;
   }
+}
+/*menu*/
+.background__image {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  height: 200px;
+}
+.background__image img {
+  width: 100%;
+  object-fit: cover;
+}
 
-  /*menu*/
-  .background__image {
-    padding: 0px;
-    margin: 0px;
-    position: relative;
-    height: 200px;
-  }
-  .background__image img {
+.menu__bloc {
+  border-radius: 20px 20px 0px 0px;
+  background-color: #f6f6f6;
+  height: 890px;
+  z-index: 1;
+  position: relative;
+}
+.menu__bloc a {
+  text-decoration: none;
+  width: 100%;
+}
+
+.entete__menu {
+  font-family: "Shrikhand", sans-serif;
+  width: auto;
+  font-size: 1.5em;
+  text-align: left;
+  margin: 0px 10px 0px 10px;
+  padding-top: 20px;
+}
+.entete__menu i {
+  float: right;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+.menu__titre {
+  font-family: "robotoregular", sans-serif;
+  font-size: 1em;
+  color: #353535;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #99e2d0;
+  width: 12%;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.menu__options {
+  height: 15vw;
+  background-color: white;
+  border-radius: 20px;
+  padding: 0px;
+  box-shadow: 2px 2px 5px gray;
+  margin: 0px 10px 10px 10px;
+  display: flex;
+  flex-direction: row;
+  font-family: "robotoregular", sans-serif;
+}
+.menu__options h2 {
+  font-family: "robotoregular", sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  padding-left: 10px;
+  margin: 10px 0px 0px 5px;
+  color: black;
+}
+.menu__options p {
+  font-family: "robotoregular", sans-serif;
+  font-size: 0.9em;
+  padding-left: 15px;
+  margin-top: 2px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__options strong {
+  font-family: "robotoregular", sans-serif;
+  font-weight: bold;
+  display: flex;
+  margin-right: 20px;
+}
+
+.commander {
+  margin: 40px 10px 40px 10px;
+  width: auto;
+  padding: 0px;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.61);
+  animation: loader 2.8s linear forwards;
+}
+.loader p {
+  font-size: 3rem;
+  font-style: normal;
+  font-family: "Shrikhand", sans-serif;
+  width: 100%;
+  height: 230px;
+  text-align: center;
+  position: relative;
+  background: -webkit-linear-gradient(225deg, #9356DC, #ff79da, #99e2d0) 0% 0%/300% 300%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fontgradient 2s ease infinite;
+}
+
+@-webkit-keyframes loader {
+  99.99% {
+    height: 100%;
     width: 100%;
-    object-fit: cover;
   }
-
-  .menu__bloc {
-    border-radius: 20px 20px 0px 0px;
-    background-color: #f6f6f6;
-    height: 890px;
-    z-index: 1;
-    position: relative;
-  }
-  .menu__bloc a {
-    text-decoration: none;
-    width: 100%;
-  }
-
-  .entete__menu {
-    font-family: "Shrikhand", sans-serif;
-    width: auto;
-    font-size: 1.5em;
-    text-align: left;
-    margin: 0px 10px 0px 10px;
-    padding-top: 20px;
-  }
-  .entete__menu i {
-    float: right;
-    margin-right: 30px;
-    text-decoration: none;
-  }
-
-  .menu__titre {
-    font-family: "robotoregular", sans-serif;
-    font-size: 1em;
-    color: #353535;
-    margin-left: 10px;
-    margin-bottom: 5px;
-    border-bottom: 2px solid #99e2d0;
-    width: 12%;
-    padding-bottom: 5px;
-    text-transform: uppercase;
-  }
-
-  .menu__options {
-    height: 15vw;
-    background-color: white;
-    border-radius: 20px;
-    padding: 0px;
-    box-shadow: 2px 2px 5px gray;
-    margin: 0px 10px 10px 10px;
-    display: flex;
-    flex-direction: row;
-    font-family: "robotoregular", sans-serif;
-  }
-  .menu__options h2 {
-    font-family: "robotoregular", sans-serif;
-    font-weight: bold;
-    font-size: 1em;
-    padding-left: 10px;
-    margin: 10px 0px 0px 5px;
-    color: black;
-  }
-  .menu__options p {
-    font-family: "robotoregular", sans-serif;
-    font-size: 0.9em;
-    padding-left: 15px;
-    margin-top: 2px;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-  }
-  .menu__options strong {
-    font-family: "robotoregular", sans-serif;
-    font-weight: bold;
-    display: flex;
-    margin-right: 20px;
-  }
-
-  .commander {
-    margin: 40px 10px 40px 10px;
-    width: auto;
-    padding: 0px;
-    text-align: center;
-    background-color: #f6f6f6;
-  }
-
-  .loader {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.61);
-    animation: loader 2.8s linear forwards;
-  }
-  .loader p {
-    font-size: 3rem;
-    font-style: normal;
-    font-family: "Shrikhand", sans-serif;
-    width: 100%;
-    height: 230px;
-    text-align: center;
-    position: relative;
-    background: -webkit-linear-gradient(225deg, #9356DC, #ff79da, #99e2d0) 0% 0%/300% 300%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fontgradient 2s ease infinite;
-  }
-
-  @keyframes loader {
-    99.99% {
-      height: 100%;
-      width: 100%;
-    }
-    100% {
-      height: 0%;
-      width: 0%;
-    }
-  }
-  @keyframes fontgradient {
-    0% {
-      background-position: 0% 92%;
-    }
-    50% {
-      background-position: 100% 9%;
-    }
-    100% {
-      background-position: 0% 92%;
-    }
+  100% {
+    height: 0%;
+    width: 0%;
   }
 }
+@keyframes loader {
+  99.99% {
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    height: 0%;
+    width: 0%;
+  }
+}
+@-webkit-keyframes fontgradient {
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
+}
+@keyframes fontgradient {
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
+}
+@-webkit-keyframes appears {
+  100% {
+    background-position-Y: -30px;
+  }
+  0% {
+    background-position-Y: 0px;
+  }
+}
+@keyframes appears {
+  100% {
+    background-position-Y: -30px;
+  }
+  0% {
+    background-position-Y: 0px;
+  }
+}
+/*@import "./components/buttons.scss";*/
 
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,28 @@
+@-webkit-keyframes loader{
+    99.99%{height: 100%; width: 100%;}
+    100%{height: 0%; width: 0%;}
+}
 @keyframes loader{
     99.99%{height: 100%; width: 100%;}
     100%{height: 0%; width: 0%;}
 } 
+@-webkit-keyframes fontgradient {
+    0%{background-position:0% 92%}
+    50%{background-position:100% 9%}
+    100%{background-position:0% 92%}
+    }
 @keyframes fontgradient {
     0%{background-position:0% 92%}
     50%{background-position:100% 9%}
     100%{background-position:0% 92%}
     }
+
+@-webkit-keyframes appears {
+    100% {background-position-Y:-30px;}
+    0% {background-position-Y:-0px;}
+    }
+@keyframes appears {
+    100% {background-position-Y:-30px;}
+    0% {background-position-Y:-0px;}
+    }
+    

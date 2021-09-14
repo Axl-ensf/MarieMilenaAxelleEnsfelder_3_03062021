@@ -1,0 +1,38 @@
+button{
+    border:0;
+    width: 250px;
+    height: 100px;
+    background:transparent;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    padding:20px 20px;
+    margin:10px 20px 30px 20px;
+    border-radius:30px;
+    font-size:1em;
+    box-shadow:0px 0px 0px 0px rgba(143, 64, 248, 0.5), 0px 0px 0px 0px rgba(39, 200, 255, 0.5);
+    transition:all 0.2s;
+      & a{
+          text-decoration: none;
+          color: white;
+      }
+  }
+  button::before{
+    content:"";
+    width:600px;
+    height:200px;
+    background: linear-gradient(180deg,#FF79DA 0%,#FF79DA 5%,#FF79DA 30%, #9356DC 50%, #9356DC 100%);
+    position:absolute;
+    top:-50px;
+    left:-100px;
+    z-index: -1;
+    transition:all .5s;
+  }
+  button:hover::before{
+      transform: rotate(150deg);
+  }
+  button:hover{
+      transform: translate(0, -6px);
+      box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, .25),-10px 10px 25px 0px
+      rgba(39, 200, 255, .25) ;
+  }
