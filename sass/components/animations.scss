@@ -30,6 +30,38 @@
     0% {background-position-Y:-0px;}
 }
 
+
+@-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-15px);
+              transform: translateY(-15px);
+    }
+  }
+@keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-15px);
+              transform: translateY(-15px);
+    }
+  }
+
+  @-webkit-keyframes fadein {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+@keyframes fadein {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+
 .loader{
     position: fixed;
     top: 0;

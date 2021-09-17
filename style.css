@@ -63,22 +63,6 @@
     margin: auto;
   }
 
-  .reservation__bouton, .commander__bouton {
-    background: linear-gradient(#ff79da, #9356DC);
-    box-shadow: 2px 2px 5px gray;
-    color: white;
-    border-radius: 15px 15px 15px 15px;
-    width: auto;
-    border: none;
-    padding: 20px;
-    margin: 20px auto;
-    text-align: center;
-  }
-  .reservation__bouton a, .commander__bouton a {
-    text-decoration: none;
-    color: white;
-  }
-
   .fontionnement {
     display: flex;
     flex-direction: column;
@@ -355,22 +339,6 @@
     margin: auto;
   }
 
-  .reservation__bouton, .commander__bouton {
-    background: linear-gradient(#ff79da, #9356DC);
-    box-shadow: 2px 2px 5px gray;
-    color: white;
-    border-radius: 15px 15px 15px 15px;
-    height: 10vw;
-    width: 50vw;
-    border: none;
-    padding: 10px 20px 10px 20px;
-    margin: 20px auto;
-  }
-  .reservation__bouton a, .commander__bouton a {
-    text-decoration: none;
-    color: white;
-  }
-
   .fontionnement {
     width: auto;
     display: flex;
@@ -611,7 +579,7 @@
   width: auto;
   font-size: 1.5em;
   text-align: left;
-  margin: 0px 10px 0px 10px;
+  margin: 0px 10px 40px 10px;
   padding-top: 20px;
 }
 .entete__menu i {
@@ -620,12 +588,17 @@
   text-decoration: none;
 }
 
+.menu__plats {
+  -webkit-animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate forwards;
+  animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate forwards;
+}
+
 .menu__titre {
   font-family: "robotoregular", sans-serif;
   font-size: 1em;
   color: #353535;
   margin-left: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   border-bottom: 2px solid #99e2d0;
   width: 12%;
   padding-bottom: 5px;
@@ -642,6 +615,8 @@
   display: flex;
   flex-direction: row;
   font-family: "robotoregular", sans-serif;
+  -webkit-animation: fadein 1s linear;
+  animation: fadein 1s linear;
 }
 .menu__options h2 {
   font-family: "robotoregular", sans-serif;
@@ -668,7 +643,6 @@
 }
 
 .commander {
-  margin: 40px 10px 40px 10px;
   width: auto;
   padding: 0px;
   text-align: center;
@@ -733,6 +707,42 @@
     background-position-Y: 0px;
   }
 }
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .loader {
   position: fixed;
   top: 0;
@@ -760,6 +770,45 @@
   animation: fontgradient 2s ease infinite;
 }
 
-/*@import "./components/buttons.scss";*/
+button {
+  border: 0;
+  text-align: center;
+  width: auto;
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  font-size: 1em;
+  box-shadow: 2px 2px 5px gray;
+  transition: all 0.2s;
+}
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button::before {
+  content: "";
+  width: 800px;
+  height: 600px;
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  position: absolute;
+  top: -100px;
+  left: -200px;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+button:hover::before {
+  transform: rotate(180deg);
+}
+
+button:hover {
+  transform: translate(0, -6px);
+  box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.25), -10px 10px 25px 0px rgba(39, 200, 255, 0.25);
+}
 
 /*# sourceMappingURL=style.css.map */

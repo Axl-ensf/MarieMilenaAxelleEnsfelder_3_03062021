@@ -50,21 +50,7 @@
       margin: auto;
     }
   }
-  .reservation__bouton, .commander__bouton {
-    background:linear-gradient($secondary,$primary_color);
-    @include bloc_shadow;
-    color: white;
-    border-radius: 15px 15px 15px 15px;
-    width: auto;
-    border: none;
-    padding: 20px;
-    margin:20px auto;
-    text-align: center;
-     & a{
-      text-decoration: none;
-      color: white;
-      }
-  }
+  
   
   .fontionnement{
     display: flex;
@@ -334,21 +320,7 @@
       margin: auto;
     }
   }
-  .reservation__bouton, .commander__bouton {
-    background:linear-gradient($secondary,$primary_color);
-    @include bloc_shadow;
-    color: white;
-    border-radius: 15px 15px 15px 15px;
-    height: 10vw;
-    width: 50vw;
-    border: none;
-    padding: 10px 20px 10px 20px;
-    margin:20px auto;
-     & a{
-      text-decoration: none;
-      color: white;
-      }
-  }
+  
   
   .fontionnement{
     width:auto;
