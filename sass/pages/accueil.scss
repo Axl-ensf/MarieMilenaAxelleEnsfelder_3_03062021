@@ -197,7 +197,7 @@
   .coeur_vide{
     color: transparent;
     -webkit-text-stroke: 3px;
-    -webkit-text-stroke-color: #9356DC;
+    -webkit-text-stroke-color: black;
   }
 .coeur_rempli{
     
@@ -286,13 +286,15 @@
     padding: 5vw;
     width: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     & a {
       text-decoration: none;
       color: black;
       padding-top: 10px;
     }
   }
+  
   .entete__logo{
     display: block;
     margin: auto;
@@ -451,8 +453,8 @@
   }
   .coeur_vide{
     color: transparent;
-    -webkit-text-stroke: 3px;
-    -webkit-text-stroke-color: #9356DC;
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: black;
   }
 .coeur_rempli{
     
@@ -496,6 +498,8 @@
     animation: appears 1s cubic-bezier(.2,.6,.8,.4) forwards;
     -webkit-animation: appears 1s cubic-bezier(.2,.6,.8,.4) forwards;
   }
+  
+  
   
   .footer__logo {
     width: 100px;

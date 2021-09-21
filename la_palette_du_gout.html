@@ -10,6 +10,10 @@
     <title>ohmyfood</title>
     <link rel="shortcut icon" href="images/logo/ohmyfood.png">
   </head>
+  <!--loader-->
+  <div class="loader">
+    <p>ohmyfood</p>
+  </div>
   <!--Mise en page resto la palette du gout-->
   <body>
     <header id="entete">
@@ -24,7 +28,19 @@
             alt="La palette du goût"/>
     </section>
     <section class="menu__bloc">
-        <p class="entete__menu">La palette du goût <i class="far fa-heart"></i></p>
+        <div class="entete__menu"><p>La palette du goût</p>
+        <section>
+          <div class="container__coeur-resto">
+            
+            <div class="coeur_vide-resto">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="coeur_rempli-resto">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+        </section>
+        </div>
         <div class="menu__plats">
         <h1 class="menu__titre">entrée</h1>
         

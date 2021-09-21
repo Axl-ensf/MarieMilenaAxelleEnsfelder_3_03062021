@@ -91,7 +91,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 9;
     background:black;
     animation: loader 2.8s linear forwards;
     & p {
@@ -109,9 +109,45 @@
       $tertiary
     )
     0% 0% / 300% 300%;
+    -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fontgradient 2s ease infinite;
+}
+.container{
+    position:relative;
+    text-align: center;
+    margin: 15px 30px;
+    font-size: 2em;    
+    cursor: pointer;
+    width:35px;
+  }
+  .coeur_vide{
+    color: transparent;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;
+  }
+  
+.coeur_rempli{
+    
+    position:absolute;
+    width:34px;
+    height: 35px;
+    bottom:9%;
+    color: transparent;
+    -webkit-text-stroke: 0px;
+    -webkit-text-stroke-color: #9356DC;
+    transform-origin: bottom;
+    transform: scale(0.1);
+    transition: transform 3s ease;
+}
+.coeur_vide:hover + .coeur_rempli{
+  background: radial-gradient(#FF79DA 0%,#FF79DA 5%, #9356DC 50%,#9356DC 100%);
+  background-clip: border-box;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transform:scale(1);
+  -webkit-text-stroke: 3px;
 }
 }
 
