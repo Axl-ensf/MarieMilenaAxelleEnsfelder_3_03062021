@@ -325,50 +325,27 @@
   }
   
   
-  .fontionnement{
+  .fonctionnement{
     width:auto;
     display: flex;
     flex-direction:column;
+    margin:20px auto;
     &__titre{
-      margin-left: 10px;
+      margin: 0px 10px 0px 10px;
       font-family: "robotoregular", sans-serif;
-      font-size: 1em;
+      font-size: 1.2em;
     }
   }
-  .fontionnement i{
+  .fonctionnement i{
     margin-left:20px;
     margin-right: 15px;
     width:auto;
     text-align:center;
     }
-  ul {
-    
-    width:95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    list-style-type: none;
-    padding-right: 10px;
-    padding-left: 10px;
-    & a{
-      color: black;
-      text-decoration: none;
-      
-    }
-    & li{
-    max-width: 100%;
-    background-color:#f6f6f6;
-    padding: 15px 0px;
-    border-radius: 15px 15px 15px 15px;
-    list-style-type: none;
-    margin: 0px 10px 15px 10px;
-    position: relative;
-    @include bloc_shadow;
-    }
-  }
   
   
-  .fontionnement span{
+  
+  .fonctionnement span{
     color: white;
     background-color: $primary_color;
     width: 20px;
@@ -382,6 +359,33 @@
     left:-6px;
   
   }
+  .fonctionnement__vignettes{
+    max-width: 90%;
+    background-color:#f6f6f6;
+    padding: 15px 0px;
+    border-radius: 15px 15px 15px 15px;
+    list-style-type: none;
+    margin: 20px auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    @include bloc_shadow;
+  }
+  .fonctionnement__vignettes p{
+    padding:0px;
+    margin:0px;
+  }
+  .fonctionnement__vignettes:hover{
+    background-color: #9256dc60;
+    cursor:pointer;
+    transition: 3s linear;
+  }
+  .fonctionnement__vignettes:hover .fonctionnement__icon{
+    color: #9356DC;
+    font-weight: bold;
+  }
+  
+  
   
   
   #restaurants {
@@ -521,6 +525,7 @@
     & ul{
       display: flex;
       flex-direction: column;
+      padding-left: 10px;
       & li{
         list-style-type: none;
         margin: 10px 20px 10px 0px;
