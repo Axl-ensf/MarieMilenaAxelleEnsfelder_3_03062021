@@ -355,7 +355,7 @@
       text-decoration: none;
       
     }
-    & ol{
+    & li{
     max-width: 100%;
     background-color:#f6f6f6;
     padding: 15px 0px;
@@ -451,6 +451,7 @@
     font-size: 2em;    
     cursor: pointer;
     width:35px;
+    height: 35px;
   }
   .coeur_vide{
     color: transparent;
@@ -460,9 +461,9 @@
 .coeur_rempli{
     
     position:absolute;
-    width:34px;
+    
     height: 35px;
-    bottom:9%;
+    top:2%;
     color: transparent;
     -webkit-text-stroke: 0px;
     -webkit-text-stroke-color: #9356DC;

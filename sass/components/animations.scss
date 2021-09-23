@@ -7,11 +7,11 @@
     100%{height: 0%; width: 0%;}
 }
 @keyframes rotate{
-    0%{transform:rotate(360);}
+    0%{transform:rotate(360deg);}
     100%{transform:rotate(0);}
 }
 @-webkit-keyframes rotate{
-    0%{transform:rotate(360);}
+    0%{transform:rotate(360deg);}
     100%{transform:rotate(0);}
 }
 @keyframes slidefromright{
@@ -72,7 +72,7 @@
     }
   }
 
-  @-webkit-keyframes fadein {
+@-webkit-keyframes fadein {
     0% {opacity:0;}
     100% {opacity:1;}
   }
@@ -121,6 +121,7 @@
     font-size: 2em;    
     cursor: pointer;
     width:35px;
+    height: 35px;
   }
   .coeur_vide{
     color: transparent;
@@ -131,9 +132,9 @@
 .coeur_rempli{
     
     position:absolute;
-    width:34px;
+    
     height: 35px;
-    bottom:9%;
+    top:2%;
     color: transparent;
     -webkit-text-stroke: 0px;
     -webkit-text-stroke-color: #9356DC;

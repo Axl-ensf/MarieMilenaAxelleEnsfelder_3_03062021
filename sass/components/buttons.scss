@@ -1,39 +1,38 @@
-
-button{
-    border:0;
-    text-align: center;
-    width: auto;
-    background:linear-gradient(180deg,#FF79DA , #9356DC);
-    position:relative;
-    overflow:hidden;
-    cursor:pointer;
-    padding:10px 20px;
-    margin:20px auto;
-    border-radius:15px;
-    font-size:1em;
-    box-shadow:2px 2px 5px gray;
-    transition:all 0.2s;
-      & a{
-          text-decoration: none;
-          color: white;
-      }
-  }
-  button::before{
-    content:"";
-    width:800px;
-    height:600px;
-    background: linear-gradient(180deg,#FF79DA , #9356DC);
-    position:absolute;
-    top:-100px;
-    left:-200px;
-    z-index: -1;
-    transition:all .5s;
-  }
-  button:hover::before{
-      transform: rotate(180deg);
-  }
-  button:hover{
-      transform: translate(0, -6px);
-      box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, .25),-10px 10px 25px 0px
-      rgba(39, 200, 255, .25) ;
-  }
+.reservation a {
+  text-decoration: none;
+  color: white;
+}
+.reservation__bouton {
+  border: 0;
+  text-align: center;
+  width: auto;
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  font-size: 1em;
+  box-shadow: 2px 2px 5px gray;
+  transition: all 0.2s;
+}
+.reservation__bouton::before {
+  content: "";
+  width: 800px;
+  height: 600px;
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  position: absolute;
+  top: -100px;
+  left: -200px;
+  z-index: -1;
+  transition: all 0.5s;
+}
+.reservation__bouton:hover::before {
+  transform: rotate(180deg);
+}
+.reservation__bouton:hover {
+  transform: translate(0, -6px);
+  box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.25),
+    -10px 10px 25px 0px rgba(39, 200, 255, 0.25);
+}
