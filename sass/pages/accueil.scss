@@ -316,6 +316,7 @@
     flex-direction: column;
     background-color:$background_resto;
     &__titre {
+      font-family: "robotoregular", sans-serif;
       font-size: 1.5em;
       color: black;
       width: 70vw;
@@ -497,6 +498,11 @@
     -webkit-background-clip: text;
     animation: appears 1s cubic-bezier(.2,.6,.8,.4) forwards;
     -webkit-animation: appears 1s cubic-bezier(.2,.6,.8,.4) forwards;
+  }
+  .coeur_vide:hover{
+    -webkit-text-stroke-color: #9356dc;
+    animation: fadein 2s linear;
+    -webkit-animation: fadein 2s linear;
   }
   
   

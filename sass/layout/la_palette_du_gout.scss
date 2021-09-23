@@ -69,6 +69,11 @@
   transform:scale(1.01);
   -webkit-text-stroke: 3px;
 }
+.coeur_vide-resto:hover{
+  -webkit-text-stroke-color: #9356dc;
+  animation: fadein 2s linear;
+  -webkit-animation: fadein 2s linear;
+}
   .menu__plats{
   -webkit-animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate forwards;
               animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate forwards;
@@ -156,10 +161,7 @@
     transform:rotate(360deg);
     animation: rotate 1s both;
 }
-@keyframes rotate{
-    0%{transform:rotate(360);}
-    100%{transform:rotate(0);}
-}
+
 .menu__options:hover .menu__chosen{
     display: flex;
     justify-content: center;
@@ -168,12 +170,7 @@
     transform-origin: right;
     margin-left: 20px;
 }
-@keyframes slidefromright{
-    0%{width:0%;}
-    25%{width:4%;}
-    50%{width:8%;}
-    100%{width:12%;}
-}
+
 .menu__options:hover .menu__price{
     padding-right: 70px;
     transition: 0.5s linear;
