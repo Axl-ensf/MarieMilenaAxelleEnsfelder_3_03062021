@@ -599,6 +599,7 @@
   font-size: 1.5em;
   text-align: left;
   margin: 0px 10px 0px 10px;
+  letter-spacing: 0.5px;
 }
 
 .container__coeur-resto {
@@ -661,7 +662,9 @@
   text-transform: uppercase;
 }
 
-.menu__options {
+.menu__vignettes {
+  width: 94%;
+  padding: 10px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -671,17 +674,10 @@
   border-radius: 20px;
   box-shadow: 2px 2px 5px gray;
   cursor: pointer;
-  margin: 10px;
+  margin: 10px auto;
   font-family: "robotoregular", sans-serif;
   -webkit-animation: fadein 1s linear;
   animation: fadein 1s linear;
-}
-
-.menu__vignettes {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
 }
 
 .menu__intitule {
@@ -691,11 +687,13 @@
   text-overflow: ellipsis;
 }
 
-.menu__plat-titre {
+.menu__intitule h2 {
   font-family: "robotoregular", sans-serif;
   font-weight: bold;
   font-size: 1em;
-  margin-bottom: 10px;
+  margin: 0px 0px 10px 0px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menu__intitule p {
@@ -742,7 +740,7 @@
   animation: rotate 1s both;
 }
 
-.menu__options:hover .menu__chosen {
+.menu__vignettes:hover .menu__chosen {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -751,7 +749,7 @@
   margin-left: 20px;
 }
 
-.menu__options:hover .menu__price {
+.menu__vignettes:hover .menu__price {
   padding-right: 70px;
   transition: 0.5s linear;
 }
