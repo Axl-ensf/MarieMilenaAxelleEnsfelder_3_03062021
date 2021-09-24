@@ -26,6 +26,7 @@
     50%{width:8%;}
     100%{width:12%;}
 }
+
  
 @keyframes fontgradient {
     0%{background-position:0% 92%}
@@ -153,6 +154,20 @@
 .coeur_vide:hover{
     -webkit-text-stroke-color: #9356dc;
   }
+}
+@media screen and (min-width:650px){
+  @keyframes slidefromright{
+    0%{width:0%;}
+    25%{width:4%;}
+    50%{width:8%;}
+    100%{width:10%;}
+}
+@-webkit-keyframes slidefromright{
+    0%{width:0%;}
+    25%{width:4%;}
+    50%{width:8%;}
+    100%{width:10%;}
+}
 }
 
 

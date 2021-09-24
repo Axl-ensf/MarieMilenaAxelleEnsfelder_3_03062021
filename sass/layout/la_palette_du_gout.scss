@@ -29,7 +29,7 @@
     justify-content: space-between;
     font-family: "Shrikhand", sans-serif;
     width:auto;
-    font-size: 1.5em;
+    font-size: 1.4em;
     text-align: left;
     margin: 0px 10px 0px 10px;
     letter-spacing: 0.5px;
@@ -53,8 +53,8 @@
 .coeur_rempli-resto{
     
     position:absolute;
-    width:36px;
-    height: 35px;
+    width:34.5px;
+    height: 33px;
     bottom:5%;
     color: transparent;
     -webkit-text-stroke: 0px;
@@ -88,7 +88,7 @@
     margin-left:10px;
     margin-bottom:15px;
     border-bottom: 2px solid $tertiary;
-    width: 12%;
+    width: 50px;
     padding-bottom: 5px;
     text-transform: uppercase;
   }
@@ -180,4 +180,46 @@
   margin:20px auto;
   width: max-content;
 }  
+@media screen and (min-width:650px){
+  .menu__plat-description{
+    width:96%;
+  }
+  .menu__chosen{
+    width:10%;
+  }
+  
+}
+@media screen and (min-width:900px){
+  .entete__logo{
+    width:25vw;
+  }
+  #entete{
+    padding:2vw;
+  }
+  .background__image img{
+    height:150%;
+  }
+  .entete__menu{
+    width:100%;
+  }
+  
+  .menu__bloc{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .menu__plats{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    margin:auto;
+  }
+  .commander{
+    width:100%;
+    text-align: center;
+  }
+  #footer__bloc{
+    padding:10px 20px 10px 20px;
+  }
+}
    
