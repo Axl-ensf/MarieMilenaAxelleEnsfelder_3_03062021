@@ -181,9 +181,14 @@
   width: max-content;
 }  
 @media screen and (min-width:650px){
+  
+  .background__image img{
+    height:150%;
+  }
   .menu__plat-description{
     width:96%;
   }
+  
   .menu__chosen{
     width:10%;
   }
