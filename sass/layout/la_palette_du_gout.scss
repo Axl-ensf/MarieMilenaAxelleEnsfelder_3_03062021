@@ -137,6 +137,11 @@
     flex-direction: row;
     justify-content: space-between;
 }
+.menu__plat-titre{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width:auto;
+}
 .menu__plat-condiments{
     text-overflow: ellipsis;
     overflow: hidden;
@@ -162,7 +167,12 @@
     transform:rotate(360deg);
     animation: rotate 1s both;
 }
-
+.menu__vignettes:hover .menu__plat-titre{
+    width:85%;  
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: 0.5s linear;
+}
 .menu__vignettes:hover .menu__chosen{
     display: flex;
     justify-content: center;
