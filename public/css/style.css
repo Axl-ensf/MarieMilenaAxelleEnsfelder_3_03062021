@@ -263,25 +263,9 @@
   transition: all 0.2s;
 }
 
-.bouton::before {
-  content: "";
-  /*width: 800px;
-  height: 600px;*/
-  background: linear-gradient(180deg, #ff79da, #9356dc);
-  position: absolute;
-  top: -100px;
-  left: -200px;
-  z-index: -1;
-  transition: all 0.5s;
-}
-
-.bouton:hover::before {
-  transform: rotate(180deg);
-}
-
 .bouton:hover {
-  transform: translate(0, -6px);
-  box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.25), -10px 10px 25px 0px rgba(39, 200, 255, 0.25);
+  background: linear-gradient(180deg, #fd98e0, #9e61e9);
+  box-shadow: 3px 3px 7px gray;
 }
 
 /*menu*/
@@ -294,6 +278,7 @@
 .background__image img {
   width: 100%;
   object-fit: cover;
+  object-position: center 75%;
 }
 
 .menu__bloc {
@@ -366,7 +351,7 @@
 
 .menu__plats {
   -webkit-animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate forwards;
-  animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate forwards;
+  animation: slide-top 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate forwards;
 }
 
 .menu__titre {
@@ -514,7 +499,7 @@
   }
 
   .background__image img {
-    height: 150%;
+    height: 200%;
   }
 
   .entete__menu {
@@ -677,9 +662,10 @@ body {
 }
 .restaurant__prev img {
   width: 100%;
-  height: 60vw;
+  height: 190px;
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
+  object-position: center 60%;
 }
 
 .restaurants__titre {
@@ -712,6 +698,7 @@ body {
   font-weight: bold;
   font-size: 1.2em;
   margin-left: 10px;
+  margin-bottom: 5px;
 }
 
 .restaurant__nom--description {
@@ -721,6 +708,7 @@ body {
 .restaurant__nom p {
   color: black;
   margin-left: 10px;
+  margin-top: 5px;
 }
 
 .container {
@@ -791,7 +779,7 @@ body {
 
 .footer__logo {
   width: 100px;
-  margin: 20px 10px 0px 15px;
+  margin: 20px 10px 0px 0px;
   filter: invert(1) sepia(10) saturate(0) hue-rotate(175deg);
 }
 
@@ -857,6 +845,10 @@ body {
 @media screen and (min-width: 900px) {
   .entete__logo {
     width: 25vw;
+  }
+
+  #entete {
+    padding: 2vw;
   }
 
   .reservation {

@@ -8,6 +8,7 @@
   & img {
     width: 100%;
     object-fit: cover;
+    object-position: center 75%;
   }
 }
 .menu__bloc {
@@ -80,7 +81,7 @@
 .menu__plats {
   -webkit-animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate
     forwards;
-  animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate
+  animation: slide-top 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate
     forwards;
 }
 
@@ -213,7 +214,7 @@
     padding: 2vw;
   }
   .background__image img {
-    height: 150%;
+    height: 200%;
   }
   .entete__menu {
     width: 100%;
