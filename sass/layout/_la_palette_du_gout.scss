@@ -32,12 +32,11 @@
   font-size: 1.4em;
   text-align: left;
   margin: 0px 10px 0px 10px;
-  letter-spacing: 0.5px;
 }
 .container__coeur-resto {
   position: relative;
   text-align: center;
-  margin: 15px 30px;
+  margin-right:1px;
   font-size: 1em;
   cursor: pointer;
   width: 35px;
@@ -198,6 +197,10 @@
   .background__image img {
     height: 150%;
   }
+  .container__coeur-resto{
+    margin-right: 50px;
+  }
+  
   .menu__plat-description {
     width: 96%;
   }
