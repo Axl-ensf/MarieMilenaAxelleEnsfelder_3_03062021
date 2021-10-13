@@ -255,7 +255,7 @@
   background: linear-gradient(180deg, #ff79da, #9356dc);
   position: relative;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 10px 15px;
   margin: 20px auto;
   border-radius: 15px;
   font-size: 1em;
@@ -303,13 +303,12 @@
   font-size: 1.4em;
   text-align: left;
   margin: 0px 10px 0px 10px;
-  letter-spacing: 0.5px;
 }
 
 .container__coeur-resto {
   position: relative;
   text-align: center;
-  margin: 15px 30px;
+  margin-right: 1px;
   font-size: 1em;
   cursor: pointer;
   width: 35px;
@@ -481,6 +480,10 @@
     height: 150%;
   }
 
+  .container__coeur-resto {
+    margin-right: 50px;
+  }
+
   .menu__plat-description {
     width: 96%;
   }
@@ -567,17 +570,22 @@ body {
   width: auto;
   padding: 20px;
   text-align: center;
-  height: 250px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
 }
 .reservation__titre {
   font-family: "robotoregular", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: black;
   width: 70vw;
-  margin: auto;
+  margin: 20px auto;
+}
+
+.reservation p {
+  font-size: 0.99em;
+  margin: 0px 0px 10px 0px;
 }
 
 .fonctionnement {
@@ -662,10 +670,25 @@ body {
 }
 .restaurant__prev img {
   width: 100%;
-  height: 190px;
+  height: 150px;
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
-  object-position: center 60%;
+}
+
+.img1 {
+  object-position: center 90%;
+}
+
+.img2 {
+  object-position: center 61%;
+}
+
+.img3 {
+  object-position: center 98%;
+}
+
+.img4 {
+  object-position: center 97%;
 }
 
 .restaurants__titre {
@@ -699,6 +722,7 @@ body {
   font-size: 1.2em;
   margin-left: 10px;
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .restaurant__nom--description {
@@ -715,9 +739,9 @@ body {
   position: relative;
   text-align: center;
   margin: 15px 30px;
-  font-size: 2em;
+  font-size: 1.5em;
   cursor: pointer;
-  width: 35px;
+  width: 45px;
   height: 35px;
 }
 
@@ -729,8 +753,8 @@ body {
 
 .coeur_rempli {
   position: absolute;
-  height: 35px;
-  top: 2%;
+  top: -1%;
+  left: 5px;
   color: transparent;
   -webkit-text-stroke: 0px;
   -webkit-text-stroke-color: #9356dc;
@@ -825,6 +849,11 @@ body {
   .restaurant__prev {
     margin: 10px;
     width: 46.7%;
+  }
+
+  .coeur_rempli {
+    top: 1%;
+    left: 6.15px;
   }
 
   .footer__logo {
